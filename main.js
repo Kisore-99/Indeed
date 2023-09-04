@@ -52,8 +52,11 @@ window.onload = () => {
     document.querySelector(".main-menu").classList.toggle("show");
   }
 
-  document.querySelector(".menu-btn").addEventListener("click", toggleClass);
-
+  let toggleBtn = document.querySelector(".menu-btn");
+  if(toggleBtn){
+    toggleBtn.addEventListener("click", toggleClass);  
+  }
+  
   if (location.search) {
     const params = Object.fromEntries(new URLSearchParams(location.search));
 
