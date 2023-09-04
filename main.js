@@ -46,8 +46,9 @@ const candidatesData = [
   },
 ];
 
-$("#navigation").load("nav.html");
+
 window.onload = () => {
+  $("#navigation").load("nav.html");
   function toggleClass() {
     document.querySelector(".main-menu").classList.toggle("show");
   }
