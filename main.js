@@ -53,7 +53,7 @@ window.onload = () => {
     document.querySelector(".main-menu").classList.toggle("show");
   }
 
-  document.querySelector(".menu-btn")?.addEventListener("click", toggleClass);  
+  document.querySelector(".menu-btn").addEventListener("click", toggleClass);  
 
   
   if (location.search) {
