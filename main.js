@@ -47,15 +47,15 @@ const candidatesData = [
 ];
 
 
-window.onload = () => {
+$(document).ready(function () {
   $("#navigation").load("nav.html");
   function toggleClass() {
     document.querySelector(".main-menu").classList.toggle("show");
   }
 
-  document.querySelector(".menu-btn").addEventListener("click", toggleClass);  
+  document.querySelector(".menu-btn").addEventListener("click", toggleClass);
 
-  
+
   if (location.search) {
     const params = Object.fromEntries(new URLSearchParams(location.search));
 
@@ -71,9 +71,8 @@ window.onload = () => {
                   <span class="candidate-location">Bengaluru, KA</span>
                   <a class="view-resume" href="#">View resume</a>
                 </div>
-                <span class="experience-year">Experience (${
-                  candidateData.experience
-                })</span>
+                <span class="experience-year">Experience (${candidateData.experience
+      })</span>
                 <div class="experience-designations">
                   <p>UI/UX designer <span class="place">at LTMindtree</span></p>
                   <p>
@@ -93,11 +92,10 @@ window.onload = () => {
                 </div>
                 <div class="tags-group">
                   <div class="update">${candidateData.update}</div>
-                  <div class="status ${
-                    candidateData.immediateJoin
-                      ? "status-immediate"
-                      : "status-passive"
-                  }">${candidateData.workStatus}</div>
+                  <div class="status ${candidateData.immediateJoin
+        ? "status-immediate"
+        : "status-passive"
+      }">${candidateData.workStatus}</div>
                 </div>
             </div>
       `;
@@ -150,4 +148,4 @@ window.onload = () => {
     });
     setCandidatesList();
   }
-};
+});
